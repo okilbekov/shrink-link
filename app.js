@@ -30,7 +30,7 @@ app.use('/api/link', linkRouter)
 app.use('/t', redirectRouter)
 
 app.get('*', (request, response) => {
-  response.sendFile(path.resolve(__dirname, 'build', 'index.html'))
+  response.sendFile('/build/index.html')
 })
 
 app.use(middleware.unknownEndpoint)
