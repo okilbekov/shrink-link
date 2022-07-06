@@ -29,6 +29,10 @@ app.use('/api/auth', authRouter)
 app.use('/api/link', linkRouter)
 app.use('/t', redirectRouter)
 
+app.get('*', (request, response) => {
+  response.sendFile(path.resolve(__dirname, 'build', 'index.html'))
+})
+
 app.use(middleware.unknownEndpoint)
 app.use(middleware.errorHandler)
 
