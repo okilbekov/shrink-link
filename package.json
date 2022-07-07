@@ -1,15 +1,15 @@
 {
   "name": "url-shortener",
   "version": "1.0.0",
-  "description": "MERN stakc",
+  "description": "MERN stack url shortener",
   "main": "index.js",
   "scripts": {
-    "start": "NODE_ENV=production node index.js",
+    "start": "cross-env NODE_ENV=production node index.js",
     "server": "NODE_ENV=development nodemon index.js",
     "client": "npm run start --prefix client",
     "client:install": "npm install --prefix client",
     "client:build": "npm run build --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "cross-env NODE_ENV=development concurrently \"npm run server\" \"npm run client\""
   },
   "keywords": [
     "mern",

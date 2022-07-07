@@ -21,13 +21,20 @@ mongoose.connect(config.MONGODB_URI)
     logger.error('error connecting to MongoDB:', error.message)
   })
 
-app.use(express.static('build'))
 app.use(express.json({ extended: true }))
 app.use(middleware.requestLogger)
 
 app.use('/api/auth', authRouter)
 app.use('/api/link', linkRouter)
 app.use('/t', redirectRouter)
+
+if(process.env.NODE_ENV === 'production') {
+  app.use('/', express.static(path.join(__dirname, 'client', 'build')))
+
+  app.get('*', (request, response) => {
+    response.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
+  })
+}
 
 app.use(middleware.unknownEndpoint)
 app.use(middleware.errorHandler)
