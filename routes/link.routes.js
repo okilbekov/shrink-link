@@ -21,7 +21,7 @@ router.post('/generate', async (request, response) => {
   }
 
   const code = shortid.generate()
-  const existing = await Link.findOne({ from })
+  const existing = await Link.findOne({ from, owner: decodedToken.userId })
 
   if(existing) {
     return response.json({ link: existing })
@@ -32,6 +32,8 @@ router.post('/generate', async (request, response) => {
   const link = new Link({
     code, from, to, owner: decodedToken.userId
   })
+
+  // console.log(link.to)
 
   await link.save()
 

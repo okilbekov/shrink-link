@@ -9,7 +9,7 @@ export const LinksList = ({ links }) => {
   }
 
   return (
-    <table className="highlight">
+    <table className="highlight" style={{ maxWidth: '90%' }}>
       <thead>
         <tr>
             <th>№</th>

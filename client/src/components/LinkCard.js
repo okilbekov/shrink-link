@@ -1,6 +1,7 @@
 import React from "react"
 
 export const LinkCard = ({ link }) => {
+  console.log(link.to)
   return (
     <>
       <h2>Link</h2>
