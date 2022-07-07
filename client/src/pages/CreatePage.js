@@ -33,7 +33,7 @@ export const CreatePage = () => {
       <div className="col s8 offset-s2" style={{ padding: '2rem' }}>
         <div className="input-field">
           <input
-            placeholder="Enter link"
+            placeholder="www.example.com"
             id="link"
             type="text"
             value={link}

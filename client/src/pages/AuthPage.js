@@ -58,7 +58,7 @@ export const AuthPage = () => {
 
             <div className="input-field">
               <input
-                placeholder="Enter email"
+                placeholder="example@domain.com"
                 id="email"
                 type="text"
                 name="email"
@@ -71,7 +71,7 @@ export const AuthPage = () => {
 
             <div className="input-field">
               <input
-                placeholder="Enter password"
+                placeholder="Must have at least 6 characters"
                 id="password"
                 type="password"
                 name="password"
