@@ -31,4 +31,15 @@ To run in production mode
 
 ```bash
   npm run client:build
+<<<<<<< HEAD
   npm start
+=======
+  npm start
+```
+
+To run in development mode
+
+```bash
+npm run dev
+```
+>>>>>>> f22f8c0c3fb0a27c7330c2fa8ae604eb71cd5e6a
