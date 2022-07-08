@@ -9,7 +9,13 @@ export const LinksList = ({ links }) => {
   }
 
   return (
-    <table className="highlight" style={{ maxWidth: '90%' }}>
+    <table className="highlight" style={{ maxWidth: '100%', tableLayout: 'fixed' }}>
+      <colgroup>
+        <col style={{ width: '5%' }}/>
+        <col style={{ width: '50%' }}/>
+        <col style={{ width: '35%' }}/>
+        <col style={{ width: '10%' }}/>
+      </colgroup> 
       <thead>
         <tr>
             <th>№</th>
@@ -23,8 +29,8 @@ export const LinksList = ({ links }) => {
         {links.map((link, index) => (
           <tr key={link.id}>
             <td>{index + 1}</td>
-            <td>{link.from}</td>
-            <td>{link.to}</td>
+            <td style={{ wordWrap: 'break-word' }}>{link.from}</td>
+            <td style={{ wordWrap: 'break-word' }}>{link.to}</td>
             <td>
               <Link to={`/detail/${link.id}`}>Open</Link>
             </td>
