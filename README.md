@@ -24,13 +24,13 @@ Install dependencies
 
 ```bash
   npm install
-  npm client:install
+  npm run client:install
 ```
 
 To run in production mode
 
 ```bash
-  npm client:build
+  npm run client:build
   npm start
 ```
 
