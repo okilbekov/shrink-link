@@ -1,7 +1,7 @@
 # Shrink Link
 
 ![screenshot](Screenshot.png)
-![screenshot](Screenshot 2.png)
+![screenshot](Screenshot-2.png)
 
 ## Introduction
 
